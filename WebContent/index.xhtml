@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head><title>PrimeFaces Intro Exercises</title>
+</h:head>
+<h:body>
+
+<div align="center">
+<h1 class="ui-widget-header ui-corner-all" align="center">PrimeFaces Intro Exercises</h1>
+<br/>
+<p:fieldset legend="No Server Behavior">  
+<h:form>
+   <b>Choose number:</b> <p:spinner/><br/>
+   <p:commandButton value="Send"/>
+   <p:commandButton value="Cancel"/>
+</h:form>
+</p:fieldset>
+<br/>
+<p:fieldset legend="Simple Server Behavior">  
+<h:form>
+   <b>Choose number:</b> <p:spinner value="#{introBean.num}"/><br/>
+   <p:commandButton value="Send" action="#{introBean.doSend}" ajax="false"/>
+   <p:commandButton value="Cancel" action="#{introBean.doCancel}" ajax="false"/>
+</h:form>
+</p:fieldset>
+<br/>
+
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><hr/>
+</h:body></html>
